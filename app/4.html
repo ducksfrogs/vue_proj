@@ -1,0 +1,62 @@
+<!doctype html>
+<html class="no-js" lang="">
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+
+
+    <!-- endbuild -->
+    <!-- build:css styles/main.css -->
+    <link rel="stylesheet" href="styles/main.css">
+    <!-- endbuild -->
+    <title>momon</title>
+    <!-- Place favicon.ico in the root directory -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+    <!-- build:css styles/vendor.css -->
+    <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css" type="text/css" />
+    <!-- endbuild -->
+  </head>
+  <body>
+    <a href="./index.html">index</a>
+    <a href="./vue.html">vue</a>
+    <a href="./2.html">ddd</a>
+    <div id="app">
+      <div class="col-sm-6">
+        <input v-model="options" type="text">
+      </div>
+     <fieldset class="form-group">
+                   <legend>Radio buttons</legend>
+                   <div class="form-check">
+                       <label class="form-check-label">
+                           <input v-model="options"  type="checkbox" class="form-check-input" name="optionsRadios" id="optionsRadios1" value="option-1" checked>
+                           Option one is this and that&mdash;be sure to include why it's great
+                       </label>
+                   </div>
+                   <div class="form-check">
+                       <label class="form-check-label">
+                           <input v-model="options"   type="checkbox" class="form-check-input" name="optionsRadios" id="optionsRadios2" value="option-2">
+                           Option two can be something else and selecting it will deselect option one
+                       </label>
+                   </div>
+                   <div class="form-check">
+                       <label class="form-check-label">
+                           <input v-model="options"   type="checkbox" class="form-check-input" name="optionsRadios" id="optionsRadios3" value="option-3">
+                           Option three is disabled
+                       </label>
+                   </div>
+      </fieldset>
+               <p>You selected {{options.join(', ')}}</p>
+</div>
+
+    <script>
+      let vm = new Vue({
+        el: '#app',
+        data: {
+          options: [],
+          message:"dddd"
+        }
+      })
+
+    </script>
+  </body>
+</html>
