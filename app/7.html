@@ -1,0 +1,35 @@
+<!doctype html>
+<html class="no-js" lang="">
+  <head>
+    <link rel="stylesheet" href="styles/main.css">
+    <title>momon</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+    <style>
+      .active{ color: green; } .notactive{ color: red; }
+    </style>
+  </head>
+
+  <body>
+    <a href="./index.html">index</a>
+    <a href="./vue.html">vue</a>
+    <a href="./2.html">ddd</a>
+      <div id="app">
+        <h1 class="static" :class="{active: isActive, 'notactive': !isActive}">{{ message }}</h1>
+        
+
+
+      </div>
+
+    <script>
+      let vm = new Vue({
+        el: '#app',
+        data: {
+          isActive: false,
+          message:"dddd"
+        }
+      })
+
+    </script>
+  </body>
+</html> 
+                                       

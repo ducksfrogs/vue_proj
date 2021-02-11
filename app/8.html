@@ -1,0 +1,45 @@
+<!doctype html>
+<html class="no-js" lang="">
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+
+
+    <title>momon</title>
+    <!-- Place favicon.ico in the root directory -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+    <!-- build:css styles/vendor.css -->
+  </head>
+  <body>
+    <a href="./index.html">index</a>
+    <a href="./vue.html">vue</a>
+    <a href="./2.html">ddd</a>
+    <div id="app">
+
+       <div :style="{color: 'red'}">
+        {{ message }}
+      </div> 
+  <div :style="{color: 'red'}">
+        {{ message }}
+      </div>
+      <div :style="styleObject">
+        {{ message}}
+      </div>
+
+    </div>
+
+    <script>
+      let vm = new Vue({
+        el: '#app',
+        data: {
+          message:"Momom",
+          styleObject:{
+            color: "Blue",
+            fontSize: '30px'
+          }
+        }
+      })
+
+    </script>
+  </body>
+</html>

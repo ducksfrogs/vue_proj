@@ -20,35 +20,26 @@
     <a href="./index.html">index</a>
     <a href="./vue.html">vue</a>
     <a href="./2.html">ddd</a>
-    <div id="app">
-     <fieldset class="form-group">
-                   <legend>Radio buttons</legend>
-                   <div class="form-check">
-                       <label class="form-check-label">
-                           <input v-model="options"  type="checkbox" class="form-check-input" name="optionsRadios" id="optionsRadios1" value="option-1" checked>
-                           Option one is this and that&mdash;be sure to include why it's great
-                       </label>
-                   </div>
-                   <div class="form-check">
-                       <label class="form-check-label">
-                           <input v-model="options"   type="checkbox" class="form-check-input" name="optionsRadios" id="optionsRadios2" value="option-2">
-                           Option two can be something else and selecting it will deselect option one
-                       </label>
-                   </div>
-                   <div class="form-check">
-                       <label class="form-check-label">
-                           <input v-model="options"   type="checkbox" class="form-check-input" name="optionsRadios" id="optionsRadios3" value="option-3">
-                           Option three is disabled
-                       </label>
-                   </div>
-      </fieldset>
-               <p>You selected {{options.join(', ')}}</p>
-</div>
+      <div id="app">
+        <a :href="url">{{ url }}</a>
+        <h1 v-on:click="number++">{{ number }}</h1>
+        <h1 v-on:click="number--">Decrease</h1>
+
+        <h1 @click="number2++">{{ number2 }}</h1>
+        <h1 @click="number2--">Decrease</h1>
+
+        <form action="" @submit.prevent='number++'>
+          <button type="submit">Submit</button>
+        </form>
+      </div>
 
     <script>
       let vm = new Vue({
         el: '#app',
         data: {
+          number2: 100,
+          number: 10,
+          url: "https://masan-s.com/puki/?FrontPage",
           options: [],
           message:"dddd"
         }
